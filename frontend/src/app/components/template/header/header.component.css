@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  align-items: center;
+
+}
+
+.header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+}
+
+.header .logo {
+  width: 40px;
+  max-height: 40px;
+}
+.header .little-group {
+  padding-left: 16px;
+}
+
+.header .little-group i {
+  padding-right: 16px;
+}

@@ -1,22 +1,25 @@
 .header {
-  display: flex;
-  align-items: center;
-
+    position: fixed;
+    height: 64px;
+    display: flex;
+    align-items: center;
 }
+
 .header a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
 
-}
 .header .logo {
-  width: 40px;
-  max-height: 40px;
+    width: 40px;
+    max-height: 40px;
 }
+
 .header .little-group {
-  padding-left: 16px;
+    padding-left: 16px;
 }
 
 .header .little-group i {
-  padding-right: 16px;
+    padding-right: 16px;
 }

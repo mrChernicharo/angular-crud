@@ -18,6 +18,11 @@
       "name": "geladeira",
       "price": 3499.95,
       "id": 4
+    },
+    {
+      "name": "violão",
+      "price": 499.95,
+      "id": 5
     }
   ]
 }

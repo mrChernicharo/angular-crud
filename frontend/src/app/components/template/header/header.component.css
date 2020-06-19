@@ -3,14 +3,12 @@
   align-items: center;
 
 }
-
 .header a {
   display: flex;
   align-items: center;
   text-decoration: none;
 
 }
-
 .header .logo {
   width: 40px;
   max-height: 40px;

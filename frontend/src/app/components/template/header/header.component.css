@@ -1,8 +1,7 @@
 .header {
-    position: fixed;
     height: 64px;
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    /* align-items: center; */
 }
 
 .header a {

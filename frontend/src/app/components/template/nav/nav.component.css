@@ -15,3 +15,6 @@
     padding: 16px;
     background-color: #fff;
 }
+.hide-nav{
+    display: none;
+}

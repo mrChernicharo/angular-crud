@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "version": "0.0.0",
+  "description": "crud app",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

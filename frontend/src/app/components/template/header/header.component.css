@@ -22,3 +22,12 @@
 .header .little-group i {
     padding-right: 16px;
 }
+
+.menu-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
+.menu-btn:hover {
+    opacity: 0.1;
+}

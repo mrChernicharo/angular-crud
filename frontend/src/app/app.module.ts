@@ -17,6 +17,7 @@ import { ProductCrudComponent } from './views/product-crud/product-crud.componen
 import { RedDirective } from './directives/red.directive';
 import { ForDirective } from './directives/for.directive';
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -7,6 +7,7 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "normalTypeScriptOptions": "here",
     "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
@@ -19,5 +20,10 @@
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
+  },
+  "typedocOptions": {
+      "mode": "modules",
+      "out": "docs"
   }
+
 }

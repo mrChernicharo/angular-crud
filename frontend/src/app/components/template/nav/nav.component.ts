@@ -6,7 +6,7 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit, OnChanges {
-  @Input() displayNav: boolean; 
+  @Input() displayNav: boolean;
   opened: boolean;
 
   constructor() { }
@@ -20,7 +20,7 @@ export class NavComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     this.opened = this.displayNav
-    console.log(`diplayNav -> ${this.displayNav}`)
+    // console.log(`diplayNav -> ${this.displayNav}`)
   }
 
 }

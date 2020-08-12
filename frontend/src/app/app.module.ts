@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http'
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -38,12 +39,13 @@ import { MyForDirective } from './directives/my-for.directive';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+		HttpClientModule,
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
     MatCardModule,
 		MatButtonModule,
-		MatSnackBarModule
+		MatSnackBarModule,
   ],
   providers: [MatButtonModule],
   bootstrap: [AppComponent]

@@ -23,6 +23,16 @@
       "name": "violão",
       "price": 499.95,
       "id": 5
+    },
+    {
+      "name": "produto de teste",
+      "price": 124.95,
+      "id": 6
+    },
+    {
+      "name": "produto de teste 2",
+      "price": 144.79,
+      "id": 10
     }
   ]
 }

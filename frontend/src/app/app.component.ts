@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'frontend';
   name = 'Maria';
-  showNav: boolean = true;
+  showNav: boolean;
 
   openNav(event: boolean) {
     this.showNav = event;

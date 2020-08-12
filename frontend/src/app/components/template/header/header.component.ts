@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +8,12 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Output() navShown = new EventEmitter<boolean>();
-  navOpened: boolean = false;
+  navOpened: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.navOpened = false;
   }
 
   showNav() {

@@ -1,10 +1,19 @@
-import { Directive } from '@angular/core';
+import { Directive, OnInit, Input } from '@angular/core';
 
 @Directive({
-  selector: '[appFor]'
+  selector: '[myFor]'
 })
-export class ForDirective {
+export class ForDirective implements OnInit {
+  @Input('myForEm') numbers: number[]; 
+  @Input('myForUsando') texto: string;
 
-  constructor() { }
+  constructor() { 
+    console.log('myFor')
+  }
+
+  ngOnInit(): void {
+    console.log(this.numbers)
+    console.log(this.texto)
+  }
 
 }

@@ -20,7 +20,7 @@ export class NavComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     this.opened = this.displayNav
-    console.log(this.displayNav)
+    console.log(`diplayNav -> ${this.displayNav}`)
   }
 
 }

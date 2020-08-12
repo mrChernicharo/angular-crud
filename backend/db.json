@@ -33,6 +33,16 @@
       "name": "produto de teste 2",
       "price": 144.79,
       "id": 10
+    },
+    {
+      "name": "produto de teste 3",
+      "price": 1244.79,
+      "id": 11
+    },
+    {
+      "name": "consolão",
+      "price": 144.79,
+      "id": 12
     }
   ]
 }

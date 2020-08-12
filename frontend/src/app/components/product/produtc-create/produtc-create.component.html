@@ -1,8 +1,24 @@
-<p>produtc-create works!</p>
+<h2>produtc-create</h2>
+
+<mat-card class="mat-elevation-z2">
+	<mat-card-title>Novo Produto</mat-card-title>
+
+	<form>
+		<mat-form-field>
+			<input name="name" placeholder="nome" [(ngModel)]="product.name" matInput>
+		</mat-form-field>
+
+		<mat-form-field>
+			<input name="price" type="number" placeholder="preço" [(ngModel)]="product.price" matInput>
+		</mat-form-field>
+	</form>
+
+</mat-card>
+
 <button mat-raised-button (click)="createProduct()" color="primary">
 	Criar Produto
 </button>
 
-<button mat-raised-button (click)="cancel()" color="primary">
+<button mat-raised-button (click)="cancel()" color="secondary">
 	Cancelar
 </button>

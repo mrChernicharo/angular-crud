@@ -8,7 +8,7 @@ import { Product } from '../product.model';
   styleUrls: ['./product-read.component.css']
 })
 export class ProductReadComponent implements OnInit {
-	private productsList: Product[];
+	public productsList: Product[];
 
   constructor(
 		private productService: ProductService

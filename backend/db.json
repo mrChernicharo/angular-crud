@@ -11,7 +11,8 @@
       "price": 6900.95
     },
     {
-      "name": "smartphone",
+			"name": "smartphone",
+			"price": 1199.95,
       "id": 3
     },
     {
@@ -43,6 +44,11 @@
       "name": "consolão",
       "price": 144.79,
       "id": 12
+    },
+    {
+      "name": "meu pau",
+      "price": 2149.39,
+      "id": 13
     }
   ]
 }

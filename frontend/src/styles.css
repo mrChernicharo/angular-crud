@@ -19,3 +19,8 @@ body {
 .v-middle {
     vertical-align: middle;
 }
+
+.mat-snack-message {
+	background: linear-gradient(20deg, #673ab7, #241a28);
+	color: #fff
+}

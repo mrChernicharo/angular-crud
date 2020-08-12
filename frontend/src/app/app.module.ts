@@ -22,10 +22,11 @@ import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
-import { ProdutcCreateComponent } from './components/product/produtc-create/produtc-create.component';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 
 import { RedDirective } from './directives/red.directive';
 import { MyForDirective } from './directives/my-for.directive';
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { MyForDirective } from './directives/my-for.directive';
     ProductCrudComponent,
     RedDirective,
     MyForDirective,
-    ProdutcCreateComponent,
+    ProductCreateComponent,
+    ProductReadComponent,
   ],
   imports: [
     BrowserModule,

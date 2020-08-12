@@ -6,11 +6,11 @@ import { Product } from '../product.model';
 
 
 @Component({
-  selector: 'app-produtc-create',
-  templateUrl: './produtc-create.component.html',
-  styleUrls: ['./produtc-create.component.css']
+  selector: 'app-product-create',
+  templateUrl: './product-create.component.html',
+  styleUrls: ['./product-create.component.css']
 })
-export class ProdutcCreateComponent implements OnInit {
+export class ProductCreateComponent implements OnInit {
 	product: Product = {
 		name: 'produto de teste 2',
 		price: 144.79

@@ -3,7 +3,7 @@ import { Directive, OnInit, Input, ViewContainerRef, TemplateRef } from '@angula
 @Directive({
   selector: '[myFor]'
 })
-export class ForDirective implements OnInit {
+export class MyForDirective implements OnInit {
   @Input('myForDentro-de') numbers: number[];
   // @Input('myForUsando') texto: string;
 

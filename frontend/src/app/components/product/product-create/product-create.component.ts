@@ -5,6 +5,16 @@ import { ProductService } from '../product.service';
 import { Product } from '../product.model';
 
 
+// @Component({
+//   selector: 'tooltip-modified-defaults-example',
+//   providers: [
+//     {provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults}
+//   ],
+// })
+// export class TooltipModifiedDefaultsExample {}
+
+
+
 @Component({
   selector: 'app-product-create',
   templateUrl: './product-create.component.html',

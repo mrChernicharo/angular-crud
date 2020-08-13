@@ -2,6 +2,7 @@ import { Component, OnInit, Output, EventEmitter, OnChanges, Input, SimpleChange
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { Product } from '../../product/product.model';
 import { ProductService } from '../../product/product.service';
+import { HeaderService } from './header.service';
 
 @Component({
   selector: 'app-header',
@@ -11,22 +12,33 @@ import { ProductService } from '../../product/product.service';
 export class HeaderComponent implements OnInit {
   @Output() navShown = new EventEmitter<boolean>();
 	navOpened: boolean;
-	@Input() currentURL: string;
 
   constructor(
-		private productService: ProductService
+		private productService: ProductService,
+		private headerService: HeaderService
 	) {}
 
   ngOnInit(): void {
 		this.navOpened = false;
-		this.currentURL = this.productService.getRoute()
 	}
 
 
   showNav() {
     this.navOpened = !this.navOpened;
 		this.navShown.emit(this.navOpened);
-		console.log(this.currentURL)
-  }
+	}
+
+	get title() {
+		const title = this.headerService.headerData.title;
+		return title;
+	}
+	get icon() {
+		return this.headerService.headerData.icon;
+	}
+	get routeURL() {
+		const url = this.headerService.headerData.routeURL;
+		// console.log(url);
+		return url;
+	}
 
 }

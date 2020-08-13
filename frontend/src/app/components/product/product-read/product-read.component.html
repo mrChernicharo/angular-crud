@@ -32,12 +32,15 @@
 			<ng-container matColumnDef="action">
 				<th mat-header-cell *matHeaderCellDef>Ações</th>
 				<td mat-cell *matCellDef="let row">
-					<a [routerLink]="['update', row.id]">
+					<a [routerLink]="['update', row.id]"
+					matTooltip="atualizar produto" matTooltipPosition="below" matTooltipShowDelay="1500">
+
 						<i class="material-icons edit">
-							edit
+						build
 						</i>
 					</a>
-					<a routerLink="/products/delete/{{ row.id }}">
+					<a routerLink="/products/delete/{{ row.id }}"
+						matTooltip="excluir produto" matTooltipPosition="after" matTooltipShowDelay="1500">
 						<i class="material-icons delete">
 							delete
 						</i>

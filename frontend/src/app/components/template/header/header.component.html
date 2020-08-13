@@ -5,13 +5,13 @@
     </a>
   </span>
   <span class="little-group">
-    <a>
+    <a routerLink="{{ routeURL }}">
       <i class="material-icons">
-        home
+        {{ icon }}
       </i>
-      Início
+			{{ title }}
     </a>
-  </span>
+	</span>
   <span class="menu-btn">
     <a (click)="showNav()">
       <i class="material-icons">

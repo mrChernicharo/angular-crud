@@ -18,7 +18,7 @@ export class ProductService {
 	constructor(
 		private snackBar: MatSnackBar,
 		private http: HttpClient,
-		private route: ActivatedRoute,
+		// private route: ActivatedRoute,
 		private router: Router,
 
 	) {}

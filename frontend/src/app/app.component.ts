@@ -1,31 +1,18 @@
-import { Component, OnChanges } from '@angular/core';
-import { ProductService } from './components/product/product.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styles: []
 })
-export class AppComponent implements OnChanges {
+export class AppComponent {
   title = 'frontend';
   name = 'Maria';
 	showNav: boolean;
-	currentRoute: string = '';
 
-	constructor(
-		private service: ProductService
-	) {	}
+	constructor() {	}
 
   openNav(event: boolean) {
     this.showNav = event;
-	}
-
-	ngOnChanges() {
-		this.getUrl()
-	}
-
-	getUrl() {
-		this.currentRoute = this.service.getRoute()
-		console.log(this.currentRoute)
 	}
 }

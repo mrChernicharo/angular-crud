@@ -17,10 +17,12 @@
 
 </mat-card>
 
-<button mat-raised-button (click)="createProduct()" color="primary">
+<button mat-raised-button (click)="createProduct()" color="primary"
+	matTooltip="Clique para criar o bendito produto!" matTooltipPosition="below" matTooltipShowDelay="1500">
 	Criar Produto
 </button>
 
-<button mat-raised-button (click)="cancel()" color="secondary">
+<button mat-raised-button (click)="cancel()" color="secondary"
+	matTooltip="retornar" matTooltipPosition="below" matTooltipShowDelay="1500">
 	Cancelar
 </button>

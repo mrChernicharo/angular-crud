@@ -33,7 +33,7 @@ export class ProductUpdateComponent implements OnInit, OnDestroy {
 
 	updateProduct() {
 		this.productService.update(this.product).subscribe(data => {
-			this.productService.showMessage(`Produto ${data.name.toUpperCase()} atualizado com sucesso! \n R$ ${data.price}`)
+			this.productService.showMessage(`Produto ${data.name.toUpperCase()} atualizado com sucesso! Preço atual: R$ ${data.price}`)
 			// this.product = data;
 		});
 		this.router.navigate(['/products']);

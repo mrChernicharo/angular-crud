@@ -30,7 +30,7 @@ export class ProductDeleteComponent implements OnInit {
 
 	deleteProduct() {
 		this.service.delete(this.id).subscribe(data => {
-			this.service.showMessage(`Produto ${this.product.id}: ${this.product.name} deletado com sucesso`)
+			this.service.showMessage(`Produto ${this.product.id}, ${this.product.name.toUpperCase()} deletado com sucesso`)
 
 		});
 

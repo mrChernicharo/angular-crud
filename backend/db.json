@@ -11,8 +11,8 @@
       "price": 6900.95
     },
     {
-			"name": "smartphone",
-			"price": 1199.95,
+      "name": "smartphone",
+      "price": 1199.95,
       "id": 3
     },
     {
@@ -49,6 +49,51 @@
       "name": "meu pau",
       "price": 2149.39,
       "id": 13
+    },
+    {
+      "name": "caneta",
+      "price": 34.79,
+      "id": 14
+    },
+    {
+      "name": "café",
+      "price": 8.79,
+      "id": 15
+    },
+    {
+      "name": "produto de teste 2",
+      "price": 144.79,
+      "id": 16
+    },
+    {
+      "name": "produto de teste 2",
+      "price": 141,
+      "id": 17
+    },
+    {
+      "name": "produto de teste 2",
+      "price": 203,
+      "id": 18
+    },
+    {
+      "name": "produto de teste 2",
+      "price": 196.4,
+      "id": 19
+    },
+    {
+      "name": "produto de teste 2",
+      "price": 144.79,
+      "id": 20
+    },
+    {
+      "name": "produto de teste 2",
+      "price": 144.79,
+      "id": 21
+    },
+    {
+      "name": "produto de teste 2",
+      "price": 144,
+      "id": 22
     }
   ]
 }

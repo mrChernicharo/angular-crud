@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild, AfterViewChecked } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
@@ -19,15 +19,11 @@ import { ProductService } from '../product.service';
 
 // extends DataSource<Product>
 
-export class ProductRead2Component implements AfterViewInit, OnInit  {
+export class ProductRead2Component implements AfterViewChecked, OnInit  {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatTable) table: MatTable<Product>;
 	dataSource: ProductRead2DataSource;
-
-	data: Product[];
-  // paginator: MatPaginator;
-  // sort: MatSort;
 
 	constructor(
 		private service: ProductService
@@ -38,14 +34,21 @@ export class ProductRead2Component implements AfterViewInit, OnInit  {
   displayedColumns = ['id', 'name', 'price'];
 
   ngOnInit() {
-		this.dataSource = new ProductRead2DataSource();
+		this.dataSource = new ProductRead2DataSource(this.service);
+	}
 
-  }
+  ngAfterViewChecked() {
+		if(this.table.dataSource) {
 
-  ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
-    this.table.dataSource = this.dataSource;
+		} else{
+			setTimeout(() => {
+				this.dataSource.sort = this.sort;
+				this.dataSource.paginator = this.paginator;
+				this.table.dataSource = this.dataSource;
+			}, 400);
+		}
+
+
 	}
 
 }

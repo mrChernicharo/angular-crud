@@ -21,11 +21,4 @@ export class ProductReadComponent implements OnInit {
 			console.log(prodsData);
 		})
 	}
-
-	// deleteProduct(id: number) {
-	// 	const deletedIndex = this.productsList.findIndex(prod => prod.id === id)
-	// 	console.log(deletedIndex)
-	// 	this.productService.delete(deletedIndex);
-	// }
-
 }

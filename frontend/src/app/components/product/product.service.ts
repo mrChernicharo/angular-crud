@@ -6,6 +6,7 @@ import { MatSnackBar } from '@angular/material/snack-bar'
 import { Product } from './product.model';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { ActivatedRoute, Router, ActivatedRouteSnapshot, Params, RouterStateSnapshot, RouterState } from '@angular/router';
 
 @Injectable({
 	providedIn: 'root'
@@ -16,7 +17,10 @@ export class ProductService {
 
 	constructor(
 		private snackBar: MatSnackBar,
-		private http: HttpClient
+		private http: HttpClient,
+		private route: ActivatedRoute,
+		private router: Router,
+
 	) {}
 
 	showMessage(message: string): void {
@@ -49,5 +53,20 @@ export class ProductService {
 
 	update(product: Product):  Observable<Product> {
 		return this.http.put<Product>(`http://localhost:3001/products/${product.id}`, product);
+	}
+
+	delete(id: string): Observable<Product> {
+		return this.http.delete<Product>(`http://localhost:3001/products/${id}`);
+	}
+
+	getRoute(): string {
+		const state: RouterState = this.router.routerState;
+		const snapshot: RouterStateSnapshot = state.snapshot;
+
+
+		// console.log(snapshot.url);
+		// console.log(state.snapshot.url);
+
+		return snapshot.url;
 	}
 }

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "caneta",
-      "price": 2.89
+      "price": 3.21
     },
     {
       "id": 2,
@@ -21,79 +21,24 @@
       "id": 4
     },
     {
-      "name": "violão",
+      "name": "violão diGiorgio",
       "price": 499.95,
       "id": 5
     },
     {
-      "name": "produto de teste",
-      "price": 124.95,
+      "name": "delícia boa",
+      "price": 2124.95,
       "id": 6
     },
     {
       "name": "produto de teste 2",
       "price": 144.79,
-      "id": 10
+      "id": 7
     },
     {
-      "name": "produto de teste 3",
-      "price": 1244.79,
-      "id": 11
-    },
-    {
-      "name": "consolão",
-      "price": 144.79,
-      "id": 12
-    },
-    {
-      "name": "meu pau",
-      "price": 2149.39,
-      "id": 13
-    },
-    {
-      "name": "caneta",
-      "price": 34.79,
-      "id": 14
-    },
-    {
-      "name": "café",
-      "price": 8.79,
-      "id": 15
-    },
-    {
-      "name": "produto de teste 2",
-      "price": 144.79,
-      "id": 16
-    },
-    {
-      "name": "produto de teste 2",
-      "price": 141,
-      "id": 17
-    },
-    {
-      "name": "produto de teste 2",
-      "price": 203,
-      "id": 18
-    },
-    {
-      "name": "produto de teste 2",
-      "price": 196.4,
-      "id": 19
-    },
-    {
-      "name": "produto de teste 2",
-      "price": 144.79,
-      "id": 20
-    },
-    {
-      "name": "produto de teste 2",
-      "price": 144.79,
-      "id": 21
-    },
-    {
-      "name": "produto de teste 2",
-      "price": 144,
-      "id": 22
+      "name": "meu pau gigante",
+      "price": 3144.79,
+      "id": 8
     }
   ]
 }

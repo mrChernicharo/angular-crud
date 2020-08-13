@@ -1,46 +1,34 @@
-import { Component, OnInit, Output, EventEmitter, OnChanges, Input, SimpleChange } from '@angular/core';
-import { ActivatedRoute, Router, Params } from '@angular/router';
-import { Product } from '../../product/product.model';
-import { ProductService } from '../../product/product.service';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HeaderService } from './header.service';
+import { HeaderData } from './header-data.model';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+	selector: 'app-header',
+	templateUrl: './header.component.html',
+	styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output() navShown = new EventEmitter<boolean>();
+	@Output() navShown = new EventEmitter<boolean>();
 	navOpened: boolean;
+	status: HeaderData
 
-  constructor(
-		private productService: ProductService,
+	constructor(
 		private headerService: HeaderService
-	) {}
+	) { }
 
-  ngOnInit(): void {
+	ngOnInit(): void {
 		this.navOpened = false;
+		this.headerService.headerDataSubject.subscribe(data => {
+			this.status = data;
+			console.log(data);
+		})
+		this.status = this.headerService.currentStatus
 	}
 
-
-  showNav() {
-    this.navOpened = !this.navOpened;
+	showNav() {
+		this.navOpened = !this.navOpened;
 		this.navShown.emit(this.navOpened);
-	}
 
-
-	get title() {
-		const title = this.headerService.headerData.title;
-		return title;
 	}
-	get icon() {
-		return this.headerService.headerData.icon;
-	}
-	get routeURL() {
-		const url = this.headerService.headerData.routeURL;
-		return url;
-	}
-
-
 
 }

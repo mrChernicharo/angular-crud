@@ -22,5 +22,6 @@ body {
 
 .mat-snack-message {
 	background: linear-gradient(50deg, #3abd5d, #062924);
-	color: #fff
+	color: #fff;
+	z-index: 3000;
 }

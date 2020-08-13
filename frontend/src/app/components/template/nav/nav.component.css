@@ -1,4 +1,6 @@
-.sidenav {
+mat-sidenav.sidenav {
+		top: 0 !important;
+		padding-top: 64px;
     background-color: #3abd5d;
     width: 200px;
 }

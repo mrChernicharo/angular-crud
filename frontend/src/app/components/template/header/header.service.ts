@@ -1,28 +1,31 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { Injectable, OnInit } from '@angular/core';
+import { BehaviorSubject, Subject, Observable } from 'rxjs';
 import { HeaderData } from './header-data.model';
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root'
 })
-export class HeaderService {
+export class HeaderService implements OnInit {
 
-	private headerDataSubject = new BehaviorSubject<HeaderData>({
+	currentStatus: HeaderData = {
 		title: 'Home',
 		icon: 'home',
 		routeURL: ''
-	})
+	};
 
-	// private headerDataSubject = new Subject<HeaderData>()
+	public headerDataSubject = new BehaviorSubject<HeaderData>({
+		title: 'Home',
+		icon: 'home',
+		routeURL: ''
+	});
 
-	constructor() { }
 
-	get headerData(): HeaderData {
-		// console.log(this.headerDataSubject.value)
-		return this.headerDataSubject.getValue()
+	constructor() {
+		this.headerDataSubject.subscribe(data => {
+			this.currentStatus = data;
+		})
 	}
 
-	set headerData(data: HeaderData) {
-		this.headerDataSubject.next(data);
+	ngOnInit() {
 	}
 }

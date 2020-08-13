@@ -1,24 +1,23 @@
 <mat-toolbar class="header mat-elevation-z4">
-  <span>
-    <a routerLink="/">
-      <img class="logo v-middle" src="assets/005-tree.svg" alt="logo" />
-    </a>
-  </span>
-  <span class="little-group menu-icon">
-    <!-- <a routerLink="{{ routeURL }}"> -->
-		<a (click)="showNav()">
-      <i class="material-icons">
-        {{ icon }}
-      </i>
-			{{ title }}
-    </a>
+	<span>
+		<a routerLink="/">
+			<img class="logo v-middle" src="assets/005-tree.svg" alt="logo" />
+		</a>
 	</span>
-  <span class="menu-btn">
-    <a (click)="showNav()">
-      <i class="material-icons">
-        menu
-      </i>
-    </a>
-  </span>
-
+	<span class="little-group menu-icon">
+		<!-- <a routerLink="{{ routeURL }}"> -->
+		<a (click)="showNav()">
+			<i class="material-icons">
+				{{ status.icon }}
+			</i>
+			{{ status.title }}
+		</a>
+	</span>
+	<span class="menu-btn">
+		<a (click)="showNav()">
+			<i class="material-icons">
+				menu
+			</i>
+		</a>
+	</span>
 </mat-toolbar>

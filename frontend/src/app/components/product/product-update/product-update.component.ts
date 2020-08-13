@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { ProductService } from '../product.service';
 import { Product } from '../product.model';
 import { Subscription } from 'rxjs';
+import { HeaderService } from '../../template/header/header.service';
 
 @Component({
   selector: 'app-product-update',
@@ -19,8 +20,16 @@ export class ProductUpdateComponent implements OnInit, OnDestroy {
   constructor(
 		private router: Router,
 		private route: ActivatedRoute,
-		private productService: ProductService
-	) { }
+		private productService: ProductService,
+		private header: HeaderService
+	) {
+		this.header.headerDataSubject.next({
+				icon: 'edit',
+				title: 'Editar Produto',
+				routeURL: `/products/update/${this.route.snapshot.params['id']}`
+
+		})
+	}
 
   ngOnInit(): void {
 		const id = this.route.snapshot.params['id']

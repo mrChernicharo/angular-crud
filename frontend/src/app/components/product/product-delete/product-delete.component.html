@@ -1,25 +1,40 @@
-<mat-card class="mat-elevation-z2">
-	<mat-card-header>
-		<mat-card-title>Deletar Produto</mat-card-title>
-		<mat-card-subtitle>produtc-delete component</mat-card-subtitle>
-	</mat-card-header>
+<div class="container">
+	<mat-card class="mat-elevation-z2">
+		<mat-card-header>
+			<mat-card-title>Deletar Produto</mat-card-title>
+			<mat-card-subtitle>produtc-delete component</mat-card-subtitle>
+		</mat-card-header>
 
-	<form>
-		<mat-form-field>
-			<input name="name" placeholder="nome" [(ngModel)]="product.name" matInput disabled>
-		</mat-form-field>
+		<form>
+			<mat-form-field>
+				<input
+					name="name"
+					placeholder="nome"
+					[(ngModel)]="product.name"
+					matInput
+					disabled
+				/>
+			</mat-form-field>
 
-		<mat-form-field>
-			<input name="price" type="number" pattern="^\d+(?:\.\d{1,2})?$" placeholder="preço" [(ngModel)]="product.price" matInput disabled>
-		</mat-form-field>
-	</form>
+			<mat-form-field>
+				<input
+					name="price"
+					type="number"
+					pattern="^\d+(?:\.\d{1,2})?$"
+					placeholder="preço"
+					[(ngModel)]="product.price"
+					matInput
+					disabled
+				/>
+			</mat-form-field>
+		</form>
+	</mat-card>
 
-</mat-card>
+	<button mat-raised-button (click)="deleteProduct()" color="accent">
+		Excluir!
+	</button>
 
-<button mat-raised-button (click)="deleteProduct()" color="accent">
-	Excluir!
-</button>
-
-<button mat-raised-button (click)="cancel()" color="secondary">
-	Cancelar
-</button>
+	<button mat-raised-button (click)="cancel()" color="secondary">
+		Cancelar
+	</button>
+</div>

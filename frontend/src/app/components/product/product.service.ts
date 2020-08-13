@@ -18,7 +18,6 @@ export class ProductService {
 	constructor(
 		private snackBar: MatSnackBar,
 		private http: HttpClient,
-		// private route: ActivatedRoute,
 		private router: Router,
 
 	) {}
@@ -26,10 +25,10 @@ export class ProductService {
 	showMessage(message: string): void {
 		this.snackBar.open(
 			message,
-			'fechar',
+			'fechar 🚫',
 			{
-				duration: 3000,
-				horizontalPosition: 'right',
+				duration: 3600,
+				horizontalPosition: 'end',
 				verticalPosition: 'top',
 				panelClass: 'mat-snack-message',
 			}

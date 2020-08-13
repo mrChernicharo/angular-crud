@@ -3,22 +3,13 @@ import { Router } from '@angular/router';
 import { ProductService } from '../product.service';
 
 import { Product } from '../product.model';
-
-
-// @Component({
-//   selector: 'tooltip-modified-defaults-example',
-//   providers: [
-//     {provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults}
-//   ],
-// })
-// export class TooltipModifiedDefaultsExample {}
-
+import { HeaderService } from '../../template/header/header.service';
 
 
 @Component({
-  selector: 'app-product-create',
-  templateUrl: './product-create.component.html',
-  styleUrls: ['./product-create.component.css']
+	selector: 'app-product-create',
+	templateUrl: './product-create.component.html',
+	styleUrls: ['./product-create.component.css']
 })
 export class ProductCreateComponent implements OnInit {
 	product: Product = {
@@ -26,13 +17,21 @@ export class ProductCreateComponent implements OnInit {
 		price: 144.79
 	}
 
-  constructor(
+	constructor(
 		private productService: ProductService,
-		private router: Router
-	) { }
+		private router: Router,
+		private headerService: HeaderService
+	) {
 
-  ngOnInit(): void {
-  }
+		this.headerService.headerDataSubject.next({
+			icon: 'add',
+			title: 'Novo produto',
+			routeURL: '/products/create'
+		});
+	}
+
+	ngOnInit(): void {
+	}
 
 	createProduct() {
 		this.productService.create(this.product).subscribe(prodData => {

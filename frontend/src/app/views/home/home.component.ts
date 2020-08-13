@@ -11,11 +11,16 @@ export class HomeComponent implements OnInit {
   constructor(
 		private headerService: HeaderService
 	) {
-		this.headerService.headerData = {
-			title: 'Home',
-			icon: 'home',
-			routeURL: ''
-		}
+		// this.headerService.headerData = {
+		// 	title: 'Home',
+		// 	icon: 'home',
+		// 	routeURL: ''
+		// }
+			this.headerService.headerDataSubject.next({
+				title: 'Home',
+				icon: 'home',
+				routeURL: ''
+			});
 	}
 
   ngOnInit(): void {

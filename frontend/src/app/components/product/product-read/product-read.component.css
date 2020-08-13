@@ -2,3 +2,18 @@ table {
 	width: 100%;
 	margin-top: 30px;
 }
+
+li {
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+}
+
+i.edit {
+	margin: 0 26px 0 0;
+	color: #3abd5d;
+}
+
+i.delete {
+	color: #ff4081;
+}

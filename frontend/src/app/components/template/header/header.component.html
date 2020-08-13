@@ -7,13 +7,23 @@
 	<span class="little-group menu-icon">
 		<!-- <a routerLink="{{ routeURL }}"> -->
 		<a (click)="showNav()">
-			<i class="material-icons">
+			<i
+				class="material-icons"
+				[ngStyle]="{
+					color:
+						status.icon === 'remove_circle'
+							? '#ff4081'
+							: status.icon === 'add'
+							? '#673ab7'
+							: '#2e2e2e'
+				}"
+			>
 				{{ status.icon }}
 			</i>
 			{{ status.title }}
 		</a>
 	</span>
-	<span class="menu-btn">
+		<span class="menu-btn" matTooltip="clique em mim!" matTooltipShowDelay="1500">
 		<a (click)="showNav()">
 			<i class="material-icons">
 				menu

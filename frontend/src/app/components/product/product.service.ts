@@ -25,12 +25,26 @@ export class ProductService {
 	showMessage(message: string): void {
 		this.snackBar.open(
 			message,
-			'fechar 🚫',
+			'❌',
 			{
 				duration: 3600,
 				horizontalPosition: 'end',
 				verticalPosition: 'top',
 				panelClass: 'mat-snack-message',
+
+			}
+		)
+	}
+
+	showErrorMessage(message: string): void {
+		this.snackBar.open(
+			message,
+			'❌',
+			{
+				duration: 3600,
+				horizontalPosition: 'end',
+				verticalPosition: 'top',
+				panelClass: 'mat-snack-error',
 			}
 		)
 	}

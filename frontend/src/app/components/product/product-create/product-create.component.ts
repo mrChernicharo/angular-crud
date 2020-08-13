@@ -16,6 +16,7 @@ export class ProductCreateComponent implements OnInit {
 		name: 'produto de teste 2',
 		price: 144.79
 	}
+	productsLength: number;
 
 	constructor(
 		private productService: ProductService,
@@ -31,14 +32,23 @@ export class ProductCreateComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
+		this.productService.read().subscribe(data => {
+			this.productsLength = data.length;
+		})
+		console.log(this.productsLength);
 	}
 
 	createProduct() {
-		this.productService.create(this.product).subscribe(prodData => {
-			console.log(prodData)
-			this.productService.showMessage(`${prodData.name.toUpperCase()} cadastrado com sucesso!`);
+		if (this.productsLength >= 15) {
+			this.productService.showErrorMessage(`Limite de armazenamento alcançado! Delete algum produto primeiro.`);
 			this.router.navigate(['/products']);
-		})
+		} else {
+			this.productService.create(this.product).subscribe(prodData => {
+				console.log(prodData)
+				this.productService.showMessage(`${prodData.name.toUpperCase()} cadastrado com sucesso!`);
+				this.router.navigate(['/products']);
+			})
+		}
 	}
 
 	cancel() {

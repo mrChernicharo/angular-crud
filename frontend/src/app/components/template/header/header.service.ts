@@ -18,7 +18,8 @@ export class HeaderService {
 	constructor() { }
 
 	get headerData(): HeaderData {
-		return this.headerDataSubject.value
+		// console.log(this.headerDataSubject.value)
+		return this.headerDataSubject.getValue()
 	}
 
 	set headerData(data: HeaderData) {

@@ -28,6 +28,7 @@ export class HeaderComponent implements OnInit {
 		this.navShown.emit(this.navOpened);
 	}
 
+
 	get title() {
 		const title = this.headerService.headerData.title;
 		return title;
@@ -37,8 +38,9 @@ export class HeaderComponent implements OnInit {
 	}
 	get routeURL() {
 		const url = this.headerService.headerData.routeURL;
-		// console.log(url);
 		return url;
 	}
+
+
 
 }

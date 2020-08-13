@@ -1,9 +1,49 @@
-<mat-card class="home mat-elevation-z3">
-  <mat-card-title class="home title">Bem vindo!</mat-card-title>
-  <mat-card-subtitle class="home subtitle"
-    >Aprenda a implementar um sistema de cadastro com Angular</mat-card-subtitle
-  >
-  <ul>
-    <li *myFor="let i = $implicit; dentro-de: [1, 2, 3, 4]">{{ i }}</li>
-  </ul>
-</mat-card>
+<div class="home-container">
+	<mat-card class="home mat-elevation-z3">
+		<mat-card-title class="home title"
+			>Bem vindo ao app <b style="color: #3abd5d;">Angular CRUD</b></mat-card-title
+		>
+		<mat-card-subtitle class="home subtitle" style="margin-top: 10px;"
+			>O seu sistema de cadastros feito com <span appRed>Angular 9</span></mat-card-subtitle
+		>
+
+		<hr class="separator">
+
+		<mat-card-content>
+			<div class="section">
+				<img
+					class="banner"
+					src="https://www.infovarejo.com.br/novo/wp-content/uploads/2016/12/O-Cadastro-de-Produtos-como-um-diferencial-competitivo-2-1.png"
+					alt="Cadastro de produtos"
+				/>
+				<p class="description">
+					Mantenha seus produtos sempre organizados, com agilidade e
+					praticidade, nessa aplicação simples e super fácil de usar. Não perca
+					tempo e vem pro <span appRed>Angular CRUD</span>, você não vai se
+					arrepender!
+				</p>
+			</div>
+
+			<br>
+
+			<div class="section">
+				<p class="description2">
+					Mantenha seus produtos sempre organizados, com agilidade e
+					praticidade, nessa aplicação simples e super fácil de usar. Não perca
+					tempo e vem pro <span appRed>Angular CRUD</span>, você não vai se
+					arrepender!
+				</p>
+
+				<img
+					class="banner2"
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSzIp4YAWBUBlVGvxJlsrIJPESXH-GEJsqEaw&usqp=CAU"
+					alt="Cadastro de produtos"
+				/>
+			</div>
+		</mat-card-content>
+	</mat-card>
+<!--
+	<ul>
+		<li *myFor="let i = $implicit; dentro-de: [1, 2, 3, 4]">{{ i }}</li>
+	</ul> -->
+</div>

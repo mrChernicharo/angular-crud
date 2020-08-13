@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { HeaderData } from './header-data.model';
 
 @Injectable({
@@ -12,6 +12,8 @@ export class HeaderService {
 		icon: 'home',
 		routeURL: ''
 	})
+
+	// private headerDataSubject = new Subject<HeaderData>()
 
 	constructor() { }
 

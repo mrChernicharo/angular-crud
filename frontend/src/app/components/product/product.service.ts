@@ -42,4 +42,12 @@ export class ProductService {
 		}));
 		return response;
 	}
+
+	readById(id: string): Observable<Product> {
+		return this.http.get<Product>(`http://localhost:3001/products/${id}`);
+	}
+
+	update(product: Product):  Observable<Product> {
+		return this.http.put<Product>(`http://localhost:3001/products/${product.id}`, product);
+	}
 }

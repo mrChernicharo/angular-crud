@@ -7,11 +7,12 @@ import { HeaderData } from './header-data.model';
 })
 export class HeaderService implements OnInit {
 
-	currentStatus: HeaderData = {
-		title: 'Home',
-		icon: 'home',
-		routeURL: ''
-	};
+	// currentStatus: HeaderData;
+	//  = {
+		// title: 'Home',
+		// icon: 'home',
+		// routeURL: ''
+	// };
 
 	public headerDataSubject = new BehaviorSubject<HeaderData>({
 		title: 'Home',
@@ -21,9 +22,9 @@ export class HeaderService implements OnInit {
 
 
 	constructor() {
-		this.headerDataSubject.subscribe(data => {
-			this.currentStatus = data;
-		})
+		// this.headerDataSubject.subscribe(data => {
+		// 	this.currentStatus = data;
+		// })
 	}
 
 	ngOnInit() {

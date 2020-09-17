@@ -22,7 +22,6 @@ export class HeaderComponent implements OnInit {
 			this.status = data;
 			console.log(data);
 		})
-		this.status = this.headerService.currentStatus
 	}
 
 	showNav() {

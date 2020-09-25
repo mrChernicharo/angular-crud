@@ -13,6 +13,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatIconModule} from '@angular/material/icon'
 
 import { FormsModule } from '@angular/forms';
 
@@ -37,6 +38,7 @@ import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { PaletteComponent } from './views/palette/palette.component';
 
 
 registerLocaleData(localePt);
@@ -56,6 +58,7 @@ registerLocaleData(localePt);
     ProductRead2Component,
     ProductUpdateComponent,
     ProductDeleteComponent,
+    PaletteComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,7 +77,8 @@ registerLocaleData(localePt);
 		MatTableModule,
 		MatPaginatorModule,
 		MatSortModule,
-		MatTooltipModule
+		MatTooltipModule,
+		MatIconModule
   ],
   providers: [{
 		provide: LOCALE_ID,

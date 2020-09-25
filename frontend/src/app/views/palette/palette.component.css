@@ -3,7 +3,8 @@
 }
 
 section {
-  display: table;
+	display: table;
+	margin: auto;
 }
 
 .example-label {

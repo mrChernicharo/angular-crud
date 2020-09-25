@@ -51,7 +51,7 @@
               "src/assets"
             ],
             "styles": [
-							{"input":"src/my-theme.scss"},
+							"src/my-theme.scss",
               "src/styles.css"
             ],
             "scripts": []

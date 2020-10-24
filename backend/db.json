@@ -3,11 +3,11 @@
     {
       "id": 2,
       "name": "notebook",
-      "price": 6420.95
+      "price": 4420.95
     },
     {
       "name": "geladeira",
-      "price": 3499.95,
+      "price": 1499.95,
       "id": 4
     },
     {
@@ -38,32 +38,12 @@
     {
       "name": "produto de teste 2",
       "price": 144.79,
-      "id": 24
-    },
-    {
-      "name": "produto de teste 2",
-      "price": 144.79,
       "id": 25
     },
     {
       "name": "produto de teste 2",
       "price": 144.79,
-      "id": 27
-    },
-    {
-      "name": "meu pau gigante",
-      "price": 10246.21,
-      "id": 28
-    },
-    {
-      "name": "produto de teste 2",
-      "price": 144.79,
       "id": 29
-    },
-    {
-      "name": "produto de teste 2",
-      "price": 144.79,
-      "id": 30
     },
     {
       "name": "produto de teste 2",
